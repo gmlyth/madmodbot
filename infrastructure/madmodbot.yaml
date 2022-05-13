@@ -1,0 +1,17 @@
+Description: A Discord bot that is insane with power.
+
+Parameters:
+  BotToken:
+    Type: String
+    Default: Get it from Discord if you don't have it. Don't just make it up.
+    Description: Enter the token for your insane robot.
+
+Resources:
+
+  BotTokenParameter:
+    Type: AWS::SSM::Parameter
+    Properties: 
+      Description: MadModBot Token
+      Name: madmodbot-token
+      Type: String
+      Value: !Ref BotToken 
